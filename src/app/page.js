@@ -5,16 +5,16 @@ import MeilleuresOffres from "@/components/client/meilleuresOffres";
 import Footer from '@/components/client/footer';
 
 
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-4 bg-gray-300 ">
      <>
      <CarouselHome/>
       <MainGridHome/>
       <MeilleuresOffres/>
       <Footer/>
      </>
-     
     </main>
   );
 }

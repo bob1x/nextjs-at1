@@ -1,27 +1,25 @@
-'use client';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Link from 'next/link';
-import HomeIcon from '@mui/icons-material/Home';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import HelpIcon from '@mui/icons-material/Help';
-
+import React from "react";
+import { Navbar, NavbarBrand,NavbarLink } from "flowbite-react";
 
 function Menu() {
-    return (
-        <>
-<Navbar bg="dark" data-bs-theme="dark">
-<Container>
-<Navbar.Brand href="#home">My-Site</Navbar.Brand>
-<Nav className="me-auto">
-<Nav.Link as={Link} href="/"><HomeIcon/>Home</Nav.Link>
-<Nav.Link as={Link} href="/"><AccountCircleIcon/>Se
-connecter</Nav.Link>
-<Nav.Link as={Link} href="/client/pageAide"><HelpIcon />Aide</Nav.Link></Nav>
-</Container>
-</Navbar>
-</>
-);
+  return (
+    <Navbar  className="bg-blue-800 text-white h-20 px-4 justify-center">
+      <NavbarBrand href="/">
+        <span className="self-center text-xl font-bold whitespace-nowrap">Ecom</span>
+      </NavbarBrand>
+      <div className="hidden md:flex items-center space-x-4">
+        <NavbarLink href="/" className="text-xl font-medium hover:text-gray-400">
+          Home
+        </NavbarLink>
+        <NavbarLink href="/admin/dashboard" className="text-xl font-medium hover:text-gray-400">
+          Admin
+        </NavbarLink>
+        <NavbarLink href="/client/pageAide" className="text-xl font-medium hover:text-gray-400">
+          Help
+        </NavbarLink>
+      </div>
+    </Navbar>
+  );
 }
+
 export default Menu;
